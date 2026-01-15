@@ -6,6 +6,8 @@ import authRoutes from './routes/auth.js';
 import partsRoutes from './routes/parts.js';
 import bidsRoutes from './routes/bids.js';
 import diagnosticsRoutes from './routes/diagnostics.js';
+import vehiclesRoutes from './routes/vehicles.js';
+import maintenanceRoutes from './routes/maintenance.js';
 
 dotenv.config();
 
@@ -38,6 +40,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/parts', partsRoutes);
 app.use('/api/bids', bidsRoutes);
 app.use('/api/diagnostics', diagnosticsRoutes);
+app.use('/api/vehicles', vehiclesRoutes);
+app.use('/api/maintenance', maintenanceRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'RightPart API is running' });

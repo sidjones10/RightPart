@@ -1,6 +1,7 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import Diagnostic from '../models/Diagnostic.js';
+import { updatePartAnalytics } from '../services/maintenancePredictor.js';
 
 const router = express.Router();
 
@@ -73,6 +74,9 @@ router.post('/diagnose', async (req, res) => {
     });
 
     await diagnostic.save();
+
+    // Update part analytics with this diagnostic data
+    await updatePartAnalytics(diagnostic);
 
     res.json({
       diagnostic,

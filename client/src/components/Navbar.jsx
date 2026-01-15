@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { User, LogOut, Wrench, Package, Search } from 'lucide-react'
+import { User, LogOut, Wrench, Package, Search, Calendar } from 'lucide-react'
 import './Navbar.css'
 
 function Navbar({ user, onLogout }) {
@@ -15,6 +15,10 @@ function Navbar({ user, onLogout }) {
           <Link to="/diagnostic" className="nav-link">
             <Search size={18} />
             Diagnostic
+          </Link>
+          <Link to="/maintenance" className="nav-link">
+            <Calendar size={18} />
+            Maintenance
           </Link>
           <Link to="/parts" className="nav-link">
             <Package size={18} />
