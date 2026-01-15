@@ -1,0 +1,74 @@
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.auth-card {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 40px;
+}
+
+.falcon-logo-large {
+  font-size: 80px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.auth-card h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: var(--text-gray);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--iron-gold);
+  font-weight: 600;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  color: var(--text-gray);
+}
+
+.auth-link {
+  color: var(--iron-gold);
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  color: var(--iron-gold-dark);
+}
+
+.error-message {
+  background: rgba(185, 28, 28, 0.2);
+  border: 1px solid var(--iron-red);
+  color: var(--iron-red-light);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

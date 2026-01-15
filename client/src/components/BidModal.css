@@ -1,0 +1,84 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(185, 28, 28, 0.3);
+}
+
+.modal-header h2 {
+  color: var(--iron-gold);
+  font-size: 24px;
+  margin: 0;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--iron-red);
+  background: rgba(185, 28, 28, 0.2);
+}
+
+.part-info {
+  background: rgba(185, 28, 28, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.part-info h3 {
+  color: var(--iron-gold);
+  margin-bottom: 8px;
+}
+
+.part-info p {
+  color: var(--text-gray);
+  margin: 4px 0;
+}
+
+.asking-price {
+  font-weight: bold;
+  color: var(--text-light) !important;
+  font-size: 18px;
+  margin-top: 12px !important;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  flex: 1;
+}

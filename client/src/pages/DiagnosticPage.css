@@ -1,0 +1,170 @@
+.diagnostic-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0;
+}
+
+.diagnostic-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.diagnostic-header h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.diagnostic-header p {
+  color: var(--text-gray);
+  font-size: 18px;
+}
+
+.diagnostic-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.diagnostic-form {
+  position: sticky;
+  top: 100px;
+}
+
+.diagnostic-form h2 {
+  color: var(--iron-gold);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-gray);
+  font-size: 13px;
+}
+
+.diagnostic-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  min-height: 400px;
+}
+
+.diagnostic-placeholder h3 {
+  color: var(--iron-red-light);
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+
+.diagnostic-placeholder p {
+  color: var(--text-gray);
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.car-model-container {
+  margin-bottom: 20px;
+}
+
+.model-controls {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-gray);
+  font-size: 13px;
+}
+
+.diagnostic-results {
+  margin-top: 20px;
+}
+
+.diagnostic-results h2 {
+  color: var(--iron-gold);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.diagnostic-results h3 {
+  color: var(--iron-red-light);
+  margin: 20px 0 12px;
+  font-size: 18px;
+}
+
+.result-info {
+  background: rgba(185, 28, 28, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.result-info p {
+  margin: 8px 0;
+  color: var(--text-light);
+}
+
+.affected-parts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.affected-part-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(220, 38, 38, 0.1);
+  border-left: 3px solid var(--iron-red);
+  margin-bottom: 8px;
+  border-radius: 4px;
+  color: var(--text-light);
+}
+
+.part-indicator {
+  width: 12px;
+  height: 12px;
+  background: var(--iron-red);
+  border-radius: 50%;
+  animation: pulse-indicator 2s ease-in-out infinite;
+}
+
+@keyframes pulse-indicator {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.email-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(185, 28, 28, 0.3);
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .diagnostic-content {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostic-form {
+    position: relative;
+    top: 0;
+  }
+}
